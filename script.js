@@ -56,3 +56,30 @@
 // console.log(num1*num2);
 // })
 // sum(...[2,4,5,6])
+
+// promises
+
+// promises have 3 states
+// 1.pending
+// 2.resolve
+// 3.reject
+
+// Constructor Syntax
+// promise produce
+// promises object take always executor i.e 'reslove','reject' 
+const myobj=new Promise((resolve,reject)=>{
+setTimeout(()=>{
+nam='raees';
+if (nam=='raees'){
+    resolve("Pass")
+}else{
+    reject('Fail')
+}
+},3000);
+});
+
+myobj.then((ans)=>{
+    console.log(ans);
+}).catch((ans)=>{
+    console.log(ans);
+});
