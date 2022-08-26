@@ -67,19 +67,33 @@
 // Constructor Syntax
 // promise produce
 // promises object take always executor i.e 'reslove','reject' 
-const myobj=new Promise((resolve,reject)=>{
-setTimeout(()=>{
-nam='raees';
-if (nam=='raees'){
-    resolve("Pass")
-}else{
-    reject('Fail')
-}
-},3000);
-});
+// const myobj=new Promise((resolve,reject)=>{
+// setTimeout(()=>{
+// nam='raees';
+// if (nam=='raees'){
+//     resolve("Pass")
+// }else{
+//     reject('Fail')
+// }
+// },3000);
+// });
 
-myobj.then((ans)=>{
-    console.log(ans);
-}).catch((ans)=>{
-    console.log(ans);
+// myobj.then((ans)=>{
+//     console.log(ans);
+// }).catch((ans)=>{
+//     console.log(ans);
+// });
+myFunction=(name)=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+resolve(name=='raees');
+reject("Error Occured");
+        },2000)
+    }) ;
+};
+myFunction('raees')
+.then((found)=>{
+console.log(`Found 😋 ${found}`);
+}).catch((notFound)=>{
+console.log(`Ohh ❌ ${notFound}`)
 });
