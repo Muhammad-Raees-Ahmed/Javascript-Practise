@@ -83,17 +83,42 @@
 // }).catch((ans)=>{
 //     console.log(ans);
 // });
-myFunction=(name)=>{
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-resolve(name=='raees');
-reject("Error Occured");
-        },2000)
-    }) ;
-};
-myFunction('raees')
-.then((found)=>{
-console.log(`Found 😋 ${found}`);
-}).catch((notFound)=>{
-console.log(`Ohh ❌ ${notFound}`)
+
+// myFunction=(name)=>{
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+// resolve(name=='raees');
+// reject("Error Occured");
+//         },2000)
+//     }) ;
+// };
+// myFunction('raees')
+// .then((found)=>{
+// console.log(`Found 😋 ${found}`);
+// }).catch((notFound)=>{
+// console.log(`Ohh ❌ ${notFound}`)
+// });
+
+// async await
+
+// getData = async() => {
+// 	var data = "Hello World";
+// 	return data;
+// }
+
+// getData().then(data => console.log(data));
+
+checker=(async(age)=>{
+
+    if (age=='20'){
+        return 'pass';
+    }
+    else{
+        return 'fail';
+    }
+});
+checker(26).then((ans)=>{
+console.log(ans)
+}).catch((ans)=>{
+    console.log(ans)
 });
