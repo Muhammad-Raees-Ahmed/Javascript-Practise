@@ -135,3 +135,8 @@ arry.forEach(function(currentvalue,index,array){
     console.log("value is :",currentvalue,  index);
     console.log(`array is ${array}`);
 })
+
+const num=[10,20,30];
+num.forEach(function(value,index,array){
+    console.log(array[index]+100);
+})
