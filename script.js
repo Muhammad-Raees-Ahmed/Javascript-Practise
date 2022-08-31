@@ -108,17 +108,30 @@
 
 // getData().then(data => console.log(data));
 
-checker=(async(age)=>{
+// checker=(async(age)=>{
 
-    if (age=='20'){
-        return 'pass';
-    }
-    else{
-        return 'fail';
-    }
-});
-checker(26).then((ans)=>{
-console.log(ans)
-}).catch((ans)=>{
-    console.log(ans)
-});
+//     if (age=='20'){
+//         return 'pass';
+//     }
+//     else{
+//         return 'fail';
+//     }
+// });
+// checker(26).then((ans)=>{
+// console.log(ans)
+// }).catch((ans)=>{
+//     console.log(ans)
+// });
+
+// for vs fooreachloop
+
+const arry=['raees','rameez','adeel','adail'];
+
+for (let i = 0; i < arry.length; i++){
+console.log(arry[i]);
+}
+
+arry.forEach(function(currentvalue,index,array){
+    console.log("value is :",currentvalue,  index);
+    console.log(`array is ${array}`);
+})
