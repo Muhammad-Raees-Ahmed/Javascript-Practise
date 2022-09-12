@@ -125,18 +125,33 @@
 
 // for vs fooreachloop
 
-const arry=['raees','rameez','adeel','adail'];
+// const arry=['raees','rameez','adeel','adail'];
 
-for (let i = 0; i < arry.length; i++){
-console.log(arry[i]);
-}
+// for (let i = 0; i < arry.length; i++){
+// console.log(arry[i]);
+// }
 
-arry.forEach(function(currentvalue,index,array){
-    console.log("value is :",currentvalue,  index);
-    console.log(`array is ${array}`);
-})
+// arry.forEach(function(currentvalue,index,array){
+//     console.log("value is :",currentvalue,  index);
+//     console.log(`array is ${array}`);
+// })
 
-const num=[10,20,30];
-num.forEach(function(value,index,array){
-    console.log(array[index]+100);
-})
+// const num=[10,20,30];
+// num.forEach(function(value,index,array){
+//     console.log(array[index]+100);
+// })
+
+const test=new Promise((resolve,reject)=>{
+    let age=30;
+    if (age==30){
+        resolve('pass raees');
+    }
+    else{
+        reject('fail bro ,dude');
+    }
+});
+test.then((result)=>{
+    console.log(`Nice ${result}`);
+}).catch((result)=>{
+    console.log(`Next time  ${result}`)
+});
